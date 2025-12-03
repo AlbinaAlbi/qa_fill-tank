@@ -164,13 +164,13 @@ describe('fillTank', () => {
       },
     };
 
-    const fuelPrice = 44.75;
+    const fuelPrice = 44.755;
     const amount = 20;
 
     fillTank(customer, fuelPrice, amount);
 
     expect(customer).toEqual({
-      money: 105,
+      money: 104.9,
       vehicle: {
         maxTankCapacity: 30,
         fuelRemains: 26,

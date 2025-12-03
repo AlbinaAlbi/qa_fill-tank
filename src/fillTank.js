@@ -33,7 +33,7 @@ function roundFuel(fuel) {
 }
 
 function roundPrice(price) {
-  return Math.round(price * 100) / 100;
+  return Math.round((price + Number.EPSILON) * 100) / 100;
 }
 
 module.exports = { fillTank };
